@@ -2,11 +2,15 @@
 
 class App {
   public function __construct() {
-    var_dump($_GET);
+    $url = $this->pasreURL();
+    var_dump($url);
   }
 
   public function pasreURL()
   {
-    
+    if( isset($_GET['url']) ) {
+      $url = $_GET['url'];
+      return $url;
+    }
   }
 }
